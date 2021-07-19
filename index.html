@@ -1,1119 +1,1037 @@
 
+
 <!DOCTYPE html>
-<!-- comment -->
-<html lang="en" xml:lang="en">
+<html lang="en-US">
 <head>
-	<meta charset="UTF-8" />
-	<!-- node ideone-www2 -->
-		<title>Online Compiler and IDE &gt;&gt; C/C++, Java, PHP, Python, Perl and 70+ other compilers and interpreters - Ideone.com</title>
-		<meta name="description" content="Compile various programming languages online. Add input stream, save output, add notes and tags." />	
-		<meta name="keywords" content="online compiler, online ide, learn programming online, programming online, run code online, snippet, snippets, pastebin, online debugging tool, online interpreter, run your code online, run code, execute code, C++, Java, Python" />
-	<meta property="og:site_name" content="Ideone.com"/>
-	<meta property="og:image" content="http://profile.ak.fbcdn.net/hprofile-ak-prn1/50232_245768360841_3377786_q.jpg"/>
-	<meta property="og:description" content="Ideone is something more than a pastebin; it's an online compiler and debugging tool which allows to compile and run code online in more than 40 programming languages."/>
-	<meta property="og:title" content="Ideone.com"/>
-	<link rel="shortcut icon" type="image/png" href="//stx1.ideone.com/gfx2/img/favicon.png" />
-			
-				<link href="//stx1.ideone.com/gfx2/libs/bootstrap/css/bootstrap-with-responsive-1200-only.min.css" rel="stylesheet" media="all"/>
-				
-		 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<!-- , initial-scale=0.25 -->
-		
-	
-	
-	
-	
-	<link rel="preconnect" href="https://www.google-analytics.com">
-	<link rel="preconnect" href="https://srv.carbonads.net">
-	<link rel="preconnect" href="https://srv.buysellads.com">
-	<link rel="preconnect" href="https://vc.hotjar.io">
-	<link rel="preconnect" href="https://vars.hotjar.com">
-	
-	
-	<style>
-	[class^="icon-"], [class*=" icon-"] {
-		display: inline;
-		width: auto;
-		height: auto;
-		/*line-height: normal;*/
-		vertical-align: baseline;
-		background-image: none;
-		background-position: 0% 0%;
-		background-repeat: repeat;
-		margin-top: 0;
-	}
-	a [class^="icon-"], a [class*=" icon-"] {
-		display: inline;
-	}
-	</style>
-	
-	
-	<link href="//stx1.ideone.com/gfx2/libs/fontello-8f7d2dfe/css/fontello.css?3" rel="stylesheet"/>
-	<!--[if IE 7]>
-		<link rel="stylesheet" href="//stx1.ideone.com/gfx2/libs/fontello-8f7d2dfe/css/fontello-ie7.min.css?3">
-	<![endif]-->
-	
-	
-	<link href="//stx1.ideone.com/themes/smoothness/jquery-ui-1.10.1.custom.min.css" type="text/css" rel="stylesheet"/> <!-- jak sie wrzuci do bundle to nie dziala -->
-	<!-- <link href="/gfx2/css/jquery-ui-bootstrap/jquery-ui-1.10.0.custom.css" type="text/css" rel="stylesheet" /> --> <!-- mozna ew wlaczyc zamiast tego powyzej -->
-		
-	<!-- 2013-02-07 by wiele: na czas develu wyrzucam to z bundle zeby moc latwiej debugowac w firebugu -->
-	
-	
-	
-	<link href="//stx1.ideone.com/gfx2/css/ideone-bundle.css?3" rel="stylesheet"/>
-	<!-- end of rzeczy przeniesione tymczasowo z bundle -->
-	
-	
-	
-	
-	
-	<script type="text/javascript">
-	
-		var cookie_name = 'settings';
-		var cookie_time = 15552000;
-		var is_mobile = 0;
-		
-		
-				var ace_options = {};
-			</script>
-	
-	<!-- 2013-02-07 by wiele: na czas develu wyrzucam to z bundle zeby moc latwiej debugowac w firebugu -->
-	
-	
-	
-	
-	
-	<script type="text/javascript" src="//stx1.ideone.com/gfx2/js/ideone-libs-bundle.js?2"></script>
-	<script type="text/javascript" src="//stx1.ideone.com/gfx2/libs/ace-2017-06/ace.js?1" data-ace-base="/gfx2/libs/ace-2017-06"></script>
-	<script type="text/javascript" src="//stx1.ideone.com/gfx2/js/ideone-common.js?12"></script>
-	<!-- end of rzeczy przeniesione tymczasowo z bundle -->
-
-	
-
-	
-	<script type="text/javascript">
-	(function(){
-		var bsa_optimize=document.createElement('script');
-		bsa_optimize.type='text/javascript';
-		bsa_optimize.async=true;
-		bsa_optimize.src='https://cdn4.buysellads.net/pub/ideone.js?'+(new Date()-new Date()%600000);
-		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa_optimize);
-	})();
-	</script>
-	
-</head>
-
-
-<body class="home  not-responsive">
-	<div id="_container">
-<noscript><div id="js_required" class="alert alert-error" style="margin-bottom: 0px">Ideone.com requires JavaScript to work.</div></noscript>
-<div class="navbar " id="primary-navigation">
-	<div class="navbar-inner">
-		<div class="container">
-			<a class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
-				<span class="icon-bar"></span> 
-				<span class="icon-bar"></span> 
-				<span class="icon-bar"></span> 
-			</a>
-						<a href="/" class="brand scroll-page"><span></span></a>
-						<div class="nav-collapse collapse " style="height: 0px;">
-				
-				<ul class="nav pull-right">
-										<li class="active"><a href="/"  class="scroll-page"><i class="icon-home"></i> new code</a></li>
-										<li class=""><a href="/samples"  class="scroll-page"><i class="icon-lightbulb"></i> samples</a></li>
-					<li class=""><a href="/recent"  class="scroll-page"><i class="icon-cloud"></i> recent codes</a></li>
-															<li class="dropdown">
-						<a href="#"  class="dropdown-toggle btn-singin-wnd-open" data-toggle="dropdown"><i class="icon-signin"></i> sign in</a>
-						<ul class="dropdown-menu dropdown-form" id="signin-dropdown">
-                        <li class="dropdown-caret right">
-                          <span class="caret-outer"></span>
-                          <span class="caret-inner"></span>
-                        </li>
-                        <li>
-                          <div class="modal-body">
-					    	<form action="//ideone.com/account/login" method="post">
-												    		<div style="margin-bottom: 20px;">
-									New user? <a class="normal-link"  href="/account/register">Sign up</a>
-								</div>
-																
-								<div class="control-group">
-									<div class="controls">
-										<div class="input-prepend" style="margin-bottom: 0px">
-											<span class="add-on rel-tooltip" title="Username or e-mail"><i class="icon-user"></i></span>
-											<input type="text" class="span2" id="username" name="username" value="" placeholder="Username or e-mail" />
-										</div>
-									</div>
-								</div>
-					    		
-					    		<div class="control-group" style="margin-bottom: 0px">
-					    			<div class="controls">
-					    				<div class="input-prepend">
-					    					<span class="add-on rel-tooltip" title="Password"><i class="icon-key"></i></span>
-					    					<input type="password" class="span2" id="password" name="password" value="" placeholder="Password" />			
-					    				</div>
-					    			</div>
-					    		</div>
-					
-								<input type="hidden" name="remember" value="yes"/>
-								<input type="hidden" name="next" value="Lw=="/>
-								
-								<div class="control-group">
-									<div class="controls">
-										<button type="submit" class="btn"><i class="icon-signin"></i> Sign in</button>
-									</div>
-								</div>
-								
-								<div>
-									<a class="normal-link" href="/account/forgot">Can't sign in?</a>
-								</div>
-								
-																<hr class="clear" style="margin: 0px; margin-bottom: 10px"/>
-								<a class="btn facebook-login-button" href="https://www.facebook.com/dialog/oauth?client_id=347515280067&redirect_uri=https://ideone.com/account/registerfb/&scope=email,user_location,user_hometown">Log in with Facebook</a>
-															</form>
-					  </div>
-                	</li>
-                      </ul>
-					</li>
-															
-					<li class=" dropdown-hover">
-					
-					</li>
-					
-									</ul>
-			</div>
-			<!-- /.nav-collapse --> 
-		</div>
-		<!-- /.container --> 
-	</div>
-	<!-- /.navbar-inner --> 
-</div>
-
-<div class="container" style="padding: 0; margin-top: 0; margin-bottom: 0;">
-
-</div>
-
-
-<script type="text/javascript">
-<!--
-	var langs_properties = {
-		
-		7:{"runnable" : 1,"sample_sol_id" : 16670898,"template_sol_id" : 21985071,"users_template_sol_id" : 0} ,
-		45:{"runnable" : 1,"sample_sol_id" : 879235,"template_sol_id" : 16673035,"users_template_sol_id" : 0} ,
-		13:{"runnable" : 1,"sample_sol_id" : 16672745,"template_sol_id" : 16672734,"users_template_sol_id" : 0} ,
-		42:{"runnable" : 1,"sample_sol_id" : 0,"template_sol_id" : 0,"users_template_sol_id" : 0} ,
-		105:{"runnable" : 1,"sample_sol_id" : 16672656,"template_sol_id" : 16672608,"users_template_sol_id" : 0} ,
-		104:{"runnable" : 1,"sample_sol_id" : 16672643,"template_sol_id" : 16672665,"users_template_sol_id" : 0} ,
-		28:{"runnable" : 1,"sample_sol_id" : 255053,"template_sol_id" : 16672600,"users_template_sol_id" : 0} ,
-		110:{"runnable" : 1,"sample_sol_id" : 53696791,"template_sol_id" : 53696791,"users_template_sol_id" : 0} ,
-		12:{"runnable" : 1,"sample_sol_id" : 42358,"template_sol_id" : 16671763,"users_template_sol_id" : 0} ,
-		11:{"runnable" : 1,"sample_sol_id" : 16671817,"template_sol_id" : 16672589,"users_template_sol_id" : 0} ,
-		81:{"runnable" : 1,"sample_sol_id" : 0,"template_sol_id" : 0,"users_template_sol_id" : 0} ,
-		27:{"runnable" : 1,"sample_sol_id" : 16672575,"template_sol_id" : 16672567,"users_template_sol_id" : 0} ,
-		1:{"runnable" : 1,"sample_sol_id" : 16671906,"template_sol_id" : 16672545,"users_template_sol_id" : 0} ,
-		41:{"runnable" : 1,"sample_sol_id" : 16671876,"template_sol_id" : 16672561,"users_template_sol_id" : 0} ,
-		44:{"runnable" : 1,"sample_sol_id" : 16672005,"template_sol_id" : 16672536,"users_template_sol_id" : 0} ,
-		82:{"runnable" : 1,"sample_sol_id" : 0,"template_sol_id" : 0,"users_template_sol_id" : 0} ,
-		34:{"runnable" : 1,"sample_sol_id" : 16672241,"template_sol_id" : 16672533,"users_template_sol_id" : 0} ,
-		14:{"runnable" : 1,"sample_sol_id" : 16672511,"template_sol_id" : 16672431,"users_template_sol_id" : 0} ,
-		111:{"runnable" : 1,"sample_sol_id" : 53697039,"template_sol_id" : 53697039,"users_template_sol_id" : 0} ,
-		118:{"runnable" : 1,"sample_sol_id" : 16673355,"template_sol_id" : 16673455,"users_template_sol_id" : 0} ,
-		106:{"runnable" : 1,"sample_sol_id" : 16673364,"template_sol_id" : 16673499,"users_template_sol_id" : 0} ,
-		91:{"runnable" : 1,"sample_sol_id" : 0,"template_sol_id" : 0,"users_template_sol_id" : 0} ,
-		31:{"runnable" : 1,"sample_sol_id" : 653,"template_sol_id" : 0,"users_template_sol_id" : 0} ,
-		32:{"runnable" : 1,"sample_sol_id" : 42362,"template_sol_id" : 16673531,"users_template_sol_id" : 0} ,
-		84:{"runnable" : 1,"sample_sol_id" : 0,"template_sol_id" : 0,"users_template_sol_id" : 0} ,
-		20:{"runnable" : 1,"sample_sol_id" : 654,"template_sol_id" : 0,"users_template_sol_id" : 0} ,
-		102:{"runnable" : 1,"sample_sol_id" : 16673535,"template_sol_id" : 255069,"users_template_sol_id" : 0} ,
-		48:{"runnable" : 1,"sample_sol_id" : 53694344,"template_sol_id" : 53694353,"users_template_sol_id" : 0} ,
-		96:{"runnable" : 1,"sample_sol_id" : 53693682,"template_sol_id" : 53693682,"users_template_sol_id" : 0} ,
-		36:{"runnable" : 1,"sample_sol_id" : 16673555,"template_sol_id" : 16673568,"users_template_sol_id" : 0} ,
-		124:{"runnable" : 1,"sample_sol_id" : 23761346,"template_sol_id" : 16673647,"users_template_sol_id" : 0} ,
-		92:{"runnable" : 1,"sample_sol_id" : 53691774,"template_sol_id" : 47132875,"users_template_sol_id" : 0} ,
-		107:{"runnable" : 1,"sample_sol_id" : 53695103,"template_sol_id" : 53695103,"users_template_sol_id" : 0} ,
-		5:{"runnable" : 1,"sample_sol_id" : 16675256,"template_sol_id" : 16675262,"users_template_sol_id" : 0} ,
-		114:{"runnable" : 1,"sample_sol_id" : 16675270,"template_sol_id" : 16675275,"users_template_sol_id" : 0} ,
-		98:{"runnable" : 1,"sample_sol_id" : 53693896,"template_sol_id" : 53694081,"users_template_sol_id" : 0} ,
-		121:{"runnable" : 1,"sample_sol_id" : 53697184,"template_sol_id" : 53697201,"users_template_sol_id" : 0} ,
-		21:{"runnable" : 1,"sample_sol_id" : 16675340,"template_sol_id" : 16675318,"users_template_sol_id" : 0} ,
-		16:{"runnable" : 1,"sample_sol_id" : 16675353,"template_sol_id" : 16675366,"users_template_sol_id" : 0} ,
-		9:{"runnable" : 1,"sample_sol_id" : 16675395,"template_sol_id" : 0,"users_template_sol_id" : 0} ,
-		10:{"runnable" : 1,"sample_sol_id" : 16675446,"template_sol_id" : 16675448,"users_template_sol_id" : 0} ,
-		55:{"runnable" : 1,"sample_sol_id" : 16675454,"template_sol_id" : 16675460,"users_template_sol_id" : 0} ,
-		112:{"runnable" : 1,"sample_sol_id" : 340843,"template_sol_id" : 16675481,"users_template_sol_id" : 0} ,
-		35:{"runnable" : 1,"sample_sol_id" : 16675473,"template_sol_id" : 16675476,"users_template_sol_id" : 0} ,
-		47:{"runnable" : 1,"sample_sol_id" : 53694184,"template_sol_id" : 53694240,"users_template_sol_id" : 0} ,
-		26:{"runnable" : 1,"sample_sol_id" : 16675486,"template_sol_id" : 16675490,"users_template_sol_id" : 0} ,
-		30:{"runnable" : 1,"sample_sol_id" : 662,"template_sol_id" : 16675523,"users_template_sol_id" : 0} ,
-		25:{"runnable" : 1,"sample_sol_id" : 16675536,"template_sol_id" : 16675537,"users_template_sol_id" : 0} ,
-		122:{"runnable" : 1,"sample_sol_id" : 53697264,"template_sol_id" : 53697264,"users_template_sol_id" : 0} ,
-		56:{"runnable" : 1,"sample_sol_id" : 16675567,"template_sol_id" : 16675577,"users_template_sol_id" : 0} ,
-		43:{"runnable" : 1,"sample_sol_id" : 37961323,"template_sol_id" : 38059233,"users_template_sol_id" : 0} ,
-		83:{"runnable" : 1,"sample_sol_id" : 53691324,"template_sol_id" : 38059236,"users_template_sol_id" : 0} ,
-		8:{"runnable" : 1,"sample_sol_id" : 16675615,"template_sol_id" : 16675621,"users_template_sol_id" : 0} ,
-		127:{"runnable" : 1,"sample_sol_id" : 53714993,"template_sol_id" : 16675635,"users_template_sol_id" : 0} ,
-		2:{"runnable" : 1,"sample_sol_id" : 16675742,"template_sol_id" : 16675744,"users_template_sol_id" : 0} ,
-		22:{"runnable" : 1,"sample_sol_id" : 16675741,"template_sol_id" : 16675739,"users_template_sol_id" : 0} ,
-		54:{"runnable" : 1,"sample_sol_id" : 638943,"template_sol_id" : 16675758,"users_template_sol_id" : 0} ,
-		3:{"runnable" : 1,"sample_sol_id" : 267085,"template_sol_id" : 16675748,"users_template_sol_id" : 0} ,
-		29:{"runnable" : 1,"sample_sol_id" : 16675788,"template_sol_id" : 16675801,"users_template_sol_id" : 0} ,
-		94:{"runnable" : 1,"sample_sol_id" : 53692298,"template_sol_id" : 53692298,"users_template_sol_id" : 0} ,
-		19:{"runnable" : 1,"sample_sol_id" : 16675862,"template_sol_id" : 16675864,"users_template_sol_id" : 0} ,
-		108:{"runnable" : 1,"sample_sol_id" : 53695716,"template_sol_id" : 53696683,"users_template_sol_id" : 0} ,
-		15:{"runnable" : 1,"sample_sol_id" : 16675896,"template_sol_id" : 16675919,"users_template_sol_id" : 0} ,
-		99:{"runnable" : 1,"sample_sol_id" : 0,"template_sol_id" : 0,"users_template_sol_id" : 0} ,
-		4:{"runnable" : 1,"sample_sol_id" : 16676006,"template_sol_id" : 16676008,"users_template_sol_id" : 0} ,
-		116:{"runnable" : 1,"sample_sol_id" : 16676011,"template_sol_id" : 16676012,"users_template_sol_id" : 0} ,
-		126:{"runnable" : 1,"sample_sol_id" : 0,"template_sol_id" : 0,"users_template_sol_id" : 0} ,
-		117:{"runnable" : 1,"sample_sol_id" : 142798,"template_sol_id" : 16676021,"users_template_sol_id" : 0} ,
-		95:{"runnable" : 1,"sample_sol_id" : 53693466,"template_sol_id" : 53693466,"users_template_sol_id" : 0} ,
-		17:{"runnable" : 1,"sample_sol_id" : 42449,"template_sol_id" : 16676030,"users_template_sol_id" : 0} ,
-		93:{"runnable" : 1,"sample_sol_id" : 53692181,"template_sol_id" : 53692193,"users_template_sol_id" : 0} ,
-		39:{"runnable" : 1,"sample_sol_id" : 16676041,"template_sol_id" : 16676047,"users_template_sol_id" : 0} ,
-		33:{"runnable" : 1,"sample_sol_id" : 16676060,"template_sol_id" : 16676113,"users_template_sol_id" : 0} ,
-		97:{"runnable" : 1,"sample_sol_id" : 53693761,"template_sol_id" : 53693761,"users_template_sol_id" : 0} ,
-		18:{"runnable" : 1,"sample_sol_id" : 670,"template_sol_id" : 0,"users_template_sol_id" : 0} ,
-		23:{"runnable" : 1,"sample_sol_id" : 16676119,"template_sol_id" : 16676125,"users_template_sol_id" : 0} ,
-		40:{"runnable" : 1,"sample_sol_id" : 3144925,"template_sol_id" : 16676135,"users_template_sol_id" : 0} ,
-		85:{"runnable" : 1,"sample_sol_id" : 51485213,"template_sol_id" : 51485317,"users_template_sol_id" : 0} ,
-		38:{"runnable" : 1,"sample_sol_id" : 16676150,"template_sol_id" : 16676171,"users_template_sol_id" : 0} ,
-		62:{"runnable" : 0,"sample_sol_id" : 42455,"template_sol_id" : 16676175,"users_template_sol_id" : 0} ,
-		115:{"runnable" : 1,"sample_sol_id" : 16676187,"template_sol_id" : 0,"users_template_sol_id" : 0} ,
-		101:{"runnable" : 1,"sample_sol_id" : 16676228,"template_sol_id" : 16676240,"users_template_sol_id" : 0} ,
-		50:{"runnable" : 1,"sample_sol_id" : 55282301,"template_sol_id" : 55282392,"users_template_sol_id" : 0} ,
-		6:{"runnable" : 1,"sample_sol_id" : 675,"template_sol_id" : 0,"users_template_sol_id" : 0} 
-				
-	};
-	$(document).ready(function(){
-		$('#upload_link').file().choose(function(e, input) {
-			$("#main_form_files").empty();
-			$(input).appendTo($('#main_form_files')).attr('name', 'file2');
-			$("#upload_file_name").html(input.val());
-			$("#upload_link_empty").css({'display': 'inline'});
-		});
-		$('#upload_link_empty').bind('click', function(){
-			$("#main_form_files").empty();
-			$("#upload_file_name").html('');
-			$("#upload_link_empty").css({'display': 'none'});
-			return false;
-		});
-		
-		//$("body > .navbar").removeClass('navbar-fixed-top');
-		//$("body").css({'padding-top': 0});
-	});
-//-->
-</script>
-
-<script src="//stx1.ideone.com/gfx2/js/ideone-index.js?4"></script>
-
-<input type="hidden" id="site" value="index" />
-
-<form enctype="multipart/form-data" action="/fake" method="post" id="main_form">
-	<input type="hidden" name="p1" id="p1" value="d36b927659ae89cafd8bf0122c7b603d"/>
-	<input type="hidden" name="p2" id="p2" value="9"/>
-	<input type="hidden" name="p3" id="p3" value="11"/>
-	<input type="hidden" name="p4" id="p4" value=""/>
-	
-	<input type="hidden" name="clone_link" value= />
-	
-	<div id="main_form_files"></div>
-
-<section class="project-carousel thebackground shadow-inner-top-bottom">
-	<div class="container">
-		<div class="row">
-			<div class="span12 home-main-box">
-				<div id="featured-project-carousel" class="carousel slide">
-					<div class="carousel-inner overflow-visible">
-						<div class="item active">
-							
-			
-			<div class="row">
-				<div class="span8 code-panel">
-					
-							<div class="header">
-								<i class="icon-code"></i>
-								enter your source code
-								
-								<span id="insert-part-or" style="display: inline">or</span>
-								<span id="insert-part-insert" style="display: inline">insert</span>
-								<span id="insert-part-template" style="display: inline"><a id="insert-template-link" href="#" class="rel-tooltip" title="Insert template">template</a></span>
-								
-								<span id="insert-part-or2" style="display: inline">or</span>
-								<span id="insert-part-sample" style="display: inline"><a id="insert-sample-link" href="#" class="rel-tooltip" title="Insert sample program">sample</a></span>
-
-								<span id="insert-part-or3" style="display: none">or</span>
-								<span id="insert-part-users-template" style="display: none"><a id="insert-users-template-link" href="#" class="rel-tooltip" title="Insert your template">your template</a></span>
-								
-								<img id="insert-loader" style="display: none; height: 11px" src="//stx1.ideone.com/gfx/loader.gif" alt="loading..."/>
-								<div class="pull-right">
-									<span class="option-clear">
-										<a href="#" class="rel-tooltip with-margin-right" title="Clear the editor" onclick="clearEditor(); return false;">clear</a>
-									</span>
-																			<a href="#" class="rel-tooltip" data-toggle="modal" data-target="#editorShortcuts" title="Show shortcuts for editor">
-										  shortcuts
-										</a>
-																	</div> 
-								<div class="clearfix"></div>
-							</div>
-					
-							
-					<!-- editor + ad -->
-					
-							<div style="border-bottom: 1px solid #ececec;">
-								<div id="file_div" ></div>
-								<div id="file_parent" style="padding: 10px;">				
-									<textarea name="file" id="file" tabindex="1" >/* package whatever; // don't place package name! */
-
-import java.util.*;
-import java.lang.*;
-import java.io.*;
-
-/* Name of the class has to be "Main" only if the class is public. */
-class Ideone
-{
-	public static void main (String[] args) throws java.lang.Exception
-	{
-		// your code goes here
-	}
-}</textarea>
-								</div>
-							</div>
-					
-					<input type="hidden" id="file_template" value="/* package whatever; // don&#039;t place package name! */
-
-import java.util.*;
-import java.lang.*;
-import java.io.*;
-
-/* Name of the class has to be &quot;Main&quot; only if the class is public. */
-class Ideone
-{
-	public static void main (String[] args) throws java.lang.Exception
-	{
-		// your code goes here
-	}
-}" />	
-					
-					<div class="alert alert-danger hidden" id="source-code-alert-too-long" style="margin-left: 10px; margin-right: 10px; margin-top: 10px;" role="alert">Your source code is too long. Maximum only 64KB.</div>
-					
-					<!-- advanced config: input -->
-					<div class="row " id="ex-input">
-						<div class="span8">
-							<div class="ex-more-options-box" style="padding: 10px; padding-top: 6px; color: #666">
-								<div style="margin-bottom: 5px">
-									<i class="icon-inbox"></i> enter input (stdin)
-									<div class="pull-right option-clear">
-										<a href="#" class="rel-tooltip" title="Clear the input" onclick="$('#input').val(''); return false;">clear</a>
-									</div>
-									<div class="clearfix"></div>
-								</div>
-								<textarea name="input" id="input" rows="2" cols="80"></textarea>
-							</div>
-						</div>
-					</div>
-					
-					<div class="alert alert-danger hidden" id="input-alert-too-long" style="margin-left: 10px; margin-right: 10px;" role="alert">Your input is too long. It will be cut to 64 KB.</div>
-					
-					<!-- advanced config: more options -->
-					<div class="row " id="ex-more-options">
-						<div class="span8">
-							<!--
-							<div class="row">
-								<div class="span8 top-border">
-								</div>
-							</div>
-							-->
-															<div class="row">
-									<div class="span8">
-										<div class="ex-more-options-box" style="padding-bottom: 0px; padding-top: 6px">
-											<!-- syntax -->
-																							<div class="syntax-box">
-													<input type="hidden" name="syntax" value="0" />
-													<label for="syntax" class="checkbox"><input type="checkbox" name="syntax" id="syntax" value="1" checked="checked" /> <span>syntax highlight</span></label>
-												</div>
-																								
-																							<div class="timelimit-box">
-													<i class="icon-time"></i> time limit:
-													<label for="timelimit-0"><input type="radio" name="timelimit" value="0" id="timelimit-0" checked="checked" /> <span>5s</span></label>
-													<label for="timelimit-1"><input type="radio" name="timelimit" value="1" id="timelimit-1"  disabled="disabled" /> <span>15s</span></label>
-													<a href="/faq#constraints" class="help-link rel-tooltip" target="_blank" title="What's the time limit?" style="margin-left: 2px"><i class="icon-help-circled"></i></a>
-												</div>
-																					
-										</div>
-									</div>
-								</div>
-														<div class="row">
-								<div class="span8">
-									<div class="ex-more-options-box" style="padding-top: 4px">
-										<!-- note -->
-										<div style="margin-bottom: 5px">
-											<i class="icon-pencil"></i> enter your note
-											<div class="pull-right option-clear">
-												<a href="#" class="rel-tooltip" title="Clear the note" onclick="$('#note').val(''); return false;">clear</a>
-											</div>
-											<div class="clearfix"></div>
-										</div>
-										<textarea name="note" id="note" rows="2" cols="80" ></textarea>
-									</div>
-								</div>
-							</div>
-													</div>
-					</div>
-					
-					
-						<div class="g" style="text-align: center; _height: 90px; _overflow: hidden;">
-						
-<!-- Ideone_S2S_Leaderboard_ROS_ATF -->
-<div id="bsa-zone_1620919776507-0_123456"></div>
-
-
-
-						
-						</div>
-					
-							
-					<!-- visible options + submit -->
-					<div class="row">
-						<div class="span8">
-							<div class="footer">
-								<!-- lang -->
-								
-								<input type="hidden" name="_lang" id="_lang" value="10"/>
-								
-								<!-- simple lang select -->
-																
-								<!-- advanced lang select -->
-																										<div class="dropdown dropup" id="lang_advselect">
-									  <a class="dropdown-toggle btn footer-item rel-tooltip" data-toggle="dropdown" href="#" title="Choose language" id="lang-dropdown-menu-button"><span>Java</span> <b class="caret"></b></a>
-									  <div id="lang-dropdown-menu" class="dropdown-menu" role="menu" aria-labelledby="lang-dropdown-menu-button">
-									  		<div id="language-details"></div>
-									  		<div class="clearfix"></div>
-									    	<div class="popular-box">
-									    		<legend>popular</legend>
-									    		<ul class="popular">
-																											<li class="">
-															<a href="#" id="menu-lang-28" data-id="28" data-label="Bash"  title="Bash (bash 5.0.3)" class="lang " tabindex="1000">Bash</a>
-														</li>
-																											<li class="">
-															<a href="#" id="menu-lang-22" data-id="22" data-label="Pascal"  title="Pascal (fpc 3.0.4)" class="lang " tabindex="1009">Pascal</a>
-														</li>
-																											<li class="">
-															<a href="#" id="menu-lang-11" data-id="11" data-label="C"  title="C (gcc 8.3)" class="lang " tabindex="1001">C</a>
-														</li>
-																											<li class="">
-															<a href="#" id="menu-lang-3" data-id="3" data-label="Perl"  title="Perl (perl 5.28.1)" class="lang " tabindex="1010">Perl</a>
-														</li>
-																											<li class="">
-															<a href="#" id="menu-lang-27" data-id="27" data-label="C#"  title="C# (gmcs 5.20.1)" class="lang " tabindex="1002">C#</a>
-														</li>
-																											<li class="">
-															<a href="#" id="menu-lang-29" data-id="29" data-label="PHP"  title="PHP (php 7.3.5)" class="lang " tabindex="1011">PHP</a>
-														</li>
-																											<li class="">
-															<a href="#" id="menu-lang-1" data-id="1" data-label="C++"  title="C++ (gcc 8.3)" class="lang " tabindex="1003">C++</a>
-														</li>
-																											<li class="">
-															<a href="#" id="menu-lang-4" data-id="4" data-label="Python"  title="Python (cpython 2.7.16)" class="lang " tabindex="1012">Python</a>
-														</li>
-																											<li class="">
-															<a href="#" id="menu-lang-44" data-id="44" data-label="C++14"  title="C++14 (gcc 8.3)" class="lang " tabindex="1004">C++14</a>
-														</li>
-																											<li class="">
-															<a href="#" id="menu-lang-116" data-id="116" data-label="Python 3"  title="Python 3 (python  3.7.3)" class="lang " tabindex="1013">Python 3</a>
-														</li>
-																											<li class="">
-															<a href="#" id="menu-lang-21" data-id="21" data-label="Haskell"  title="Haskell (ghc 8.4.4)" class="lang " tabindex="1005">Haskell</a>
-														</li>
-																											<li class="">
-															<a href="#" id="menu-lang-17" data-id="17" data-label="Ruby"  title="Ruby (ruby 2.5.5)" class="lang " tabindex="1014">Ruby</a>
-														</li>
-																											<li class="active">
-															<a href="#" id="menu-lang-10" data-id="10" data-label="Java"  title="Java (HotSpot 12)" class="lang " tabindex="1006">Java</a>
-														</li>
-																											<li class="">
-															<a href="#" id="menu-lang-40" data-id="40" data-label="SQLite"  title="SQLite (sqlite 3.27.2)" class="lang " tabindex="1015">SQLite</a>
-														</li>
-																											<li class="">
-															<a href="#" id="menu-lang-43" data-id="43" data-label="Objective-C"  title="Objective-C (gcc 8.3)" class="lang " tabindex="1007">Objective-C</a>
-														</li>
-																											<li class="">
-															<a href="#" id="menu-lang-85" data-id="85" data-label="Swift"  title="Swift (swift 4.2.2)" class="lang " tabindex="1016">Swift</a>
-														</li>
-																											<li class="">
-															<a href="#" id="menu-lang-2" data-id="2" data-label="Pascal"  title="Pascal (gpc 20070904)" class="lang " tabindex="1008">Pascal</a>
-														</li>
-																											<li class="">
-															<a href="#" id="menu-lang-50" data-id="50" data-label="VB.net"  title="VB.net (mono 4.7)" class="lang " tabindex="1017">VB.net</a>
-														</li>
-																						    		</ul>
-									    	</div>
-									    	<div class="rest-box">
-									    		<legend>others</legend>
-									    		<ul class="rest">
-																											<li class="">
-															<a href="#" id="menu-lang-7" data-id="7" data-label="Ada95"  title="Ada95 (gnat 8.3)" class="lang " tabindex="1018">Ada95</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-31" data-id="31" data-label="Common Lisp"  title="Common Lisp (sbcl 1.4.16)" class="lang " tabindex="1035">Common Lisp</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-55" data-id="55" data-label="Java"  title="Java (sun-jdk-1.8.0_51)" class="lang " tabindex="1052">Java</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-15" data-id="15" data-label="Prolog"  title="Prolog (swi 7.6.4)" class="lang " tabindex="1068">Prolog</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-45" data-id="45" data-label="Assembler 32bit"  title="Assembler 32bit (gcc 8.3)" class="lang " tabindex="1019">Assembler 32bit</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-32" data-id="32" data-label="Common Lisp"  title="Common Lisp (clisp 2.49.92)" class="lang " tabindex="1036">Common Lisp</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-35" data-id="35" data-label="JavaScript"  title="JavaScript (rhino 1.7.9)" class="lang " tabindex="1053">JavaScript</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-99" data-id="99" data-label="Python"  title="Python (PyPy 2.7.13)" class="lang " tabindex="1069">Python</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-13" data-id="13" data-label="Assembler 32bit"  title="Assembler 32bit (nasm 2.14)" class="lang " tabindex="1020">Assembler 32bit</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-20" data-id="20" data-label="D"  title="D (gdc 8.3)" class="lang " tabindex="1037">D</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-112" data-id="112" data-label="JavaScript"  title="JavaScript (SMonkey 60.2.3)" class="lang " tabindex="1054">JavaScript</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-126" data-id="126" data-label="Python 3 nbc"  title="Python 3 nbc (python 3.7.3)" class="lang " tabindex="1070">Python 3 nbc</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-42" data-id="42" data-label="Assembler 64bit"  title="Assembler 64bit (nasm 2.14)" class="lang " tabindex="1021">Assembler 64bit</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-84" data-id="84" data-label="D"  title="D (ldc 1.12.0)" class="lang " tabindex="1038">D</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-47" data-id="47" data-label="Kotlin"  title="Kotlin (kotlin 1.3.21)" class="lang " tabindex="1055">Kotlin</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-117" data-id="117" data-label="R"  title="R (R 3.5.2)" class="lang " tabindex="1071">R</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-104" data-id="104" data-label="AWK"  title="AWK (gawk 4.2.1)" class="lang " tabindex="1022">AWK</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-102" data-id="102" data-label="D"  title="D (dmd 2.085.0)" class="lang " tabindex="1039">D</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-26" data-id="26" data-label="Lua"  title="Lua (luac 5.3.3)" class="lang " tabindex="1056">Lua</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-95" data-id="95" data-label="Racket"  title="Racket (racket 7.0)" class="lang " tabindex="1072">Racket</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-105" data-id="105" data-label="AWK"  title="AWK (mawk 1.3.3)" class="lang " tabindex="1023">AWK</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-48" data-id="48" data-label="Dart"  title="Dart (dart 2.3.0)" class="lang " tabindex="1040">Dart</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-30" data-id="30" data-label="Nemerle"  title="Nemerle (ncc 1.2.547)" class="lang " tabindex="1057">Nemerle</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-93" data-id="93" data-label="Rust"  title="Rust (rust 1.33.0)" class="lang " tabindex="1073">Rust</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-110" data-id="110" data-label="BC"  title="BC (bc 1.07.1)" class="lang " tabindex="1024">BC</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-96" data-id="96" data-label="Elixir"  title="Elixir (elixir 1.8.2)" class="lang " tabindex="1041">Elixir</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-25" data-id="25" data-label="Nice"  title="Nice (nicec 0.9.13)" class="lang " tabindex="1058">Nice</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-39" data-id="39" data-label="Scala"  title="Scala (scala 2.12.8)" class="lang " tabindex="1074">Scala</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-12" data-id="12" data-label="Brainf**k"  title="Brainf**k (bff 1.0.6)" class="lang " tabindex="1025">Brainf**k</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-36" data-id="36" data-label="Erlang"  title="Erlang (erl 21.3.8)" class="lang " tabindex="1042">Erlang</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-122" data-id="122" data-label="Nim"  title="Nim (nim 0.19.4)" class="lang " tabindex="1059">Nim</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-33" data-id="33" data-label="Scheme"  title="Scheme (guile 2.2.4)" class="lang " tabindex="1075">Scheme</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-81" data-id="81" data-label="C"  title="C (clang 8.0)" class="lang " tabindex="1026">C</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-124" data-id="124" data-label="F#"  title="F# (mono 4.1)" class="lang " tabindex="1043">F#</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-56" data-id="56" data-label="Node.js"  title="Node.js (node 11.12.0)" class="lang " tabindex="1060">Node.js</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-18" data-id="18" data-label="Scheme"  title="Scheme (stalin 0.11)" class="lang " tabindex="1076">Scheme</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-41" data-id="41" data-label="C++ 4.3.2"  title="C++ 4.3.2 (gcc-4.3.2)" class="lang " tabindex="1027">C++ 4.3.2</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-92" data-id="92" data-label="Fantom"  title="Fantom (fantom 1.0.72)" class="lang " tabindex="1044">Fantom</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-83" data-id="83" data-label="Objective-C"  title="Objective-C (clang 8.0)" class="lang " tabindex="1061">Objective-C</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-97" data-id="97" data-label="Scheme"  title="Scheme (chicken 4.13)" class="lang " tabindex="1077">Scheme</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-82" data-id="82" data-label="C++14"  title="C++14 (clang 8.0)" class="lang " tabindex="1028">C++14</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-107" data-id="107" data-label="Forth"  title="Forth (gforth 0.7.3)" class="lang " tabindex="1045">Forth</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-8" data-id="8" data-label="OCaml"  title="OCaml (ocamlopt 4.05.0)" class="lang " tabindex="1062">OCaml</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-23" data-id="23" data-label="Smalltalk"  title="Smalltalk (gst 3.2.5)" class="lang " tabindex="1078">Smalltalk</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-34" data-id="34" data-label="C99"  title="C99 (gcc 8.3)" class="lang " tabindex="1029">C99</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-5" data-id="5" data-label="Fortran"  title="Fortran (gfortran 8.3)" class="lang " tabindex="1046">Fortran</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-127" data-id="127" data-label="Octave"  title="Octave (octave 4.4.1)" class="lang " tabindex="1063">Octave</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-38" data-id="38" data-label="TCL"  title="TCL (tcl 8.6)" class="lang " tabindex="1079">TCL</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-14" data-id="14" data-label="Clips"  title="Clips (clips 6.30)" class="lang " tabindex="1030">Clips</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-114" data-id="114" data-label="Go"  title="Go (go 1.12.1)" class="lang " tabindex="1047">Go</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-54" data-id="54" data-label="Perl"  title="Perl (perl 2018.12)" class="lang " tabindex="1064">Perl</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-62" data-id="62" data-label="Text"  title="Text (text 6.10)" class="lang " tabindex="1080">Text</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-111" data-id="111" data-label="Clojure"  title="Clojure (clojure 1.10.0)" class="lang " tabindex="1031">Clojure</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-98" data-id="98" data-label="Gosu"  title="Gosu (gosu 1.14.9)" class="lang " tabindex="1048">Gosu</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-94" data-id="94" data-label="Pico Lisp"  title="Pico Lisp (pico 18.12.27)" class="lang " tabindex="1065">Pico Lisp</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-115" data-id="115" data-label="Unlambda"  title="Unlambda (unlambda 0.1.4.2)" class="lang " tabindex="1081">Unlambda</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-118" data-id="118" data-label="Cobol"  title="Cobol (gnucobol 2.2.0)" class="lang " tabindex="1032">Cobol</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-121" data-id="121" data-label="Groovy"  title="Groovy (groovy 2.5.6)" class="lang " tabindex="1049">Groovy</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-19" data-id="19" data-label="Pike"  title="Pike (pike 8.0)" class="lang " tabindex="1066">Pike</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-101" data-id="101" data-label="VB.NET"  title="VB.NET (mono-3.10)" class="lang " tabindex="1082">VB.NET</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-106" data-id="106" data-label="COBOL 85"  title="COBOL 85 (tinycobol-0.65.9)" class="lang " tabindex="1033">COBOL 85</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-16" data-id="16" data-label="Icon"  title="Icon (iconc 9.5.1)" class="lang " tabindex="1050">Icon</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-108" data-id="108" data-label="Prolog"  title="Prolog (gprolog 1.4.5)" class="lang " tabindex="1067">Prolog</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-6" data-id="6" data-label="Whitespace"  title="Whitespace (wspace 0.3)" class="lang " tabindex="1083">Whitespace</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-91" data-id="91" data-label="CoffeeScript"  title="CoffeeScript (coffee 2.4.1)" class="lang " tabindex="1034">CoffeeScript</a>
-														</li> 
-																											<li class="">
-															<a href="#" id="menu-lang-9" data-id="9" data-label="Intercal"  title="Intercal (ick 0.3)" class="lang " tabindex="1051">Intercal</a>
-														</li> 
-																									</ul>
-									    	</div>					
-									  </div>
-									</div>
-																									
-																
-									<!-- show input -->
-									<button type="button" class="btn footer-item rel-tooltip" data-toggle="button" title="Specify input (stdin)" id="button-input"><i class="icon-inbox"></i> stdin</button>
-																			
-								<!-- visibility -->
-								<input type="hidden" name="public" value="1" />		
-								<div class="btn-group footer-item" data-toggle="buttons-radio" id="btn-group-visibility">
-			  						<button type="button" class="rel-tooltip btn active" data-value="1" title="Public - your code will be available to everyone."><i class="icon-globe"></i></button>
-			  						<button type="button" class="rel-tooltip btn " data-value="0" title="Secret - your code will be available only to those with whom you share a link."><i class="icon-glasses"></i></button>
-			  									  							<button type="button" class="rel-tooltip btn  disabled" disabled="disabled" data-value="-1" title="Private - only you will be able to access the code. You have to be signed in to use this option."><i class="icon-lock"></i></button>
-			  														</div>
-												
-								
-																	<!-- more options -->
-									<a href="#" id="button-more-options" class="">
-										<span class="more-options-more">more&nbsp;options</span>
-										<span class="more-options-less">fewer&nbsp;options</span>
-									</a>
-								 
-								
-								<!-- submit -->
-								<div class="pull-right">
-									<input type="hidden" name="run" value="1" />
-									<button type="submit" name="Submit" id="Submit" tabindex="2" class="btn btn-success footer-item rel-tooltip" title="Run the program (Ctrl+Enter)" >
-										<i class="icon-cog-alt"></i>
-										Run									</button>
-								</div>
-								
-								<div class="clearfix"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="span4">
-					
-					
-						
-					
-					<!-- ad -->
-					<div class="right-sidebar" data-spy="_affix" data-offset-top="40" >
-
-						
-<!-- Ideone_S2S_Sidebar_ROS_ATF -->
-<div id="bsa-zone_1620921930965-5_123456"></div>
-<br/>
-
-
-
-
-						
-												
-						<a href="http://spoj.com/?utm_campaign=permanent&utm_medium=main-right&utm_source=ideone" target="_blank">
-							<img src="//stx1.ideone.com/gfx2/img/spoj.png" style="width: 370px;"/>
-						</a>
-						
-						
-<div class="col-md-12 discover-sphere-engine-api">
-	<h4>Discover &gt; <a href="/sphere-engine">Sphere Engine API</a></h4>
-	<p>The brand new service which powers Ideone!</p>
-	
-	<h4>Discover &gt; <a href="/sphere-engine-widget">IDE Widget</a></h4>
-    <p>Widget for compiling and running the source code in a web browser!</p>
-</div>
-
-						
-					</div>
-					
-					
-
-				</div>
-			</div>
-			
-			
-						</div>
-						
-						<!-- /.item -->
-						<div class="item">
-							
-							
-						</div>
-						<!-- /.item -->
-						<div class="item">
-											
-						</div>
-					</div>
-					<!-- 
-						<a class="left carousel-control" href="#featured-project-carousel" data-slide="prev">‹</a> 
-						<a class="right carousel-control" href="#featured-project-carousel" data-slide="next">›</a> </div>
-					 -->
-				</div>
-			</div>
-		</div>
-		
-	</div>
-</section>
-<div class="bor"></div>
-	
-<div class="container">
-	
-	<div class="row">
-		<!-- TODO: translate -->
-		<div class="span8">
-			<div class="row">
-				<div class="span4 home-info-box">
-					<legend>What is Ideone?</legend> 
-					Ideone is an online compiler and debugging tool which allows you to compile source code and execute it online in more than 60 programming languages. 
-				</div>
-				<div class="span4 home-info-box">
-					<legend>How to use Ideone?</legend> 
-					Choose a programming language, enter the source code with optional input data... and you are ready to go!
-				</div>
-			</div>
-			<div class="row">
-				<div class="span4 home-info-box">
-					<legend>Having problems?</legend> 
-					Check the <a href="/samples">samples</a> to see how to write code which works correctly.To find out more visit <a href="/faq">our FAQ section</a>. 
-				</div>
-				<div class="span4">
-					<legend>Sphere Engine&trade;</legend>
-					We are proud to present our <strong>Sphere Engine&trade;</strong> technology, which allows you to execute programs on a remote serverin a secure way within a complete runtime environment. Visit the <a href="http://sphere-engine.com/?utm_campaign=permanent&utm_medium=main&utm_source=ideone" target="_blank">Sphere Engine&trade; website</a> to find out more.
-				</div>
-			</div>
-			<div class="row">
-			</div>
-		</div>
-		
-		<div class="span4 home-info-box">
-						<legend>
-				Follow us
-				<div class="pull-right">
-					<a 
-						class="btn-social btn-twitter" 
-						title="Follow @ideone on Twitter" 
-						href="https://twitter.com/intent/follow?screen_name=ideone"
-						target="_blank"
-					>
-						<i class="icon-twitter"></i>
-						<span>Follow <b>@ideone</b></span>
-					</a>
-				</div>
-			</legend>
-			<div>
-				<a href="https://www.facebook.com/ideone/" target="_blank" style="">
-					<img src="/gfx2/img/facebook-box.png" alt="Facebook Ideone" style="width: 100%">
-				</a>
-			</div>
-					</div>
-	</div>
-</div>
-
-</form>
-
-<!-- Modal shortcuts-->
-<div class="modal hide fade" id="editorShortcuts" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Shortcuts</h4>
-      </div>
-      <div class="modal-body">
-      	<div class="shortcuts-editor-label">Global</div>
-        <ul class="shortcuts-editor-list">
-        	<li><span class="key">Ctrl <span class="plus">+</span> Enter</span> <span class="command">run</span></li>
-        </ul>
-        
-        <div class="shortcuts-editor-label">Ace editor</div>
-        <ul class="shortcuts-editor-list">
-        	<li><span class="key">Ctrl <span class="plus">+</span> Enter</span> <span class="command">run</span></li>
-        </ul>
-        
-        <div class="shortcuts-editor-label">Textarea</div>
-        <ul class="shortcuts-editor-list">
-        	<li><span class="key">Ctrl <span class="plus">+</span> Enter</span> <span class="command">run</span></li>
-        </ul>
-        
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="cookie-ue" style="border: 0px; margin: 0px; padding: 0px; position: fixed; left: 0px; bottom: 0px; background-color: #ddd; width: 100%; font-size: 12px; z-index: 10000; opacity: 0.9;">
-	<div style="padding: 5px;" class="container">
-		<span id="cookie-ue-msg-content"></span>
-		<button type="button" class="btn btn-small" title="OK" id="cookie-ue-button">OK</button>
-	</div>
-	
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$("#cookie-ue-msg-content").text("We use cookies to improve our services. If you continue without changing your settings, we'll assume that you are happy to receive all cookies on Ideone website.");
-			$("#cookie-ue-button").click(function(){
-				cookie_helper_set('ue', 1);
-				$("#cookie-ue").hide();
-			});
-		});
-	</script>
-	
-</div>
-			
-		
-				
-			<div id="footer" class="footer shadow-inner-top">
-				<div class="container">
-									<a href="http://sphere-research.com?utm_campaign=permanent&utm_medium=footer&utm_source=ideone" target="_blank">Sphere Research Labs</a>.
-					Ideone is powered by <a href="http://sphere-engine.com/?utm_campaign=permanent&utm_medium=footer&utm_source=ideone" target="_blank">Sphere Engine&trade;</a>
-								
-				<p id="footer-links">
-					<a href="/">Home</a>
-					
-					<a href="https://sphere-engine.com/?utm_campaign=permanent&utm_medium=sphereengine&utm_source=ideone" target="_blank">API</a>
-					
-											<a href="#" data-toggle="modal" data-target="#lang-dialog">Language</a>  
-										<a href="/faq">FAQ</a>
-					<a href="/credits">Credits</a>
-					
-					
-										<span style="margin-left: 20px">
-													desktop
-				 			<a href="/switch/mobile/Lw==" class="margin-left">mobile</a>
-									 		</span>
-			 		<br/>
-			 		<a href="/legal-tos">Terms of Service</a>
-			 		<a href="/legal-pp">Privacy Policy</a>
-			 		<a href="/legal-gdpr">GDPR Info</a>
-				</p>
-				
-				<a href="/ideone/Tools/bug/form/1" id="show_bug_dialog" data-toggle="modal" data-target="#bug-dialog">Feedback &amp; Bugs</a>
-					
-				<!-- 
-				<p class="values">7, 0.11s, 0.15s</p>
-				-->
-				
-				<br>
-			    <p><strong>Popular languages:</strong></p>
-			    <p>
-			         <a href="/l/bash">Bash</a>
-                     <a href="/l/pascal">Pascal</a>
-                     <a href="/l/c">C</a>
-                     <a href="/l/perl">Perl</a>
-                     <a href="/l/c-sharp">C#</a>
-                     <a href="/l/php">PHP</a>
-                     <a href="/l/cpp">C++</a>
-                     <a href="/l/pascal">Python</a>
-                     <a href="/l/cpp14">C++14</a>
-                     <a href="/l/python-3">Python3</a>
-                     <a href="/l/haskell">Haskell</a>
-                     <a href="/l/ruby">Ruby</a>
-                     <a href="/l/java">Java</a>
-                     <a href="/l/sqlite">SQLite</a>
-                     <a href="/l/objective-c">Objective-C</a>
-                     <a href="/l/swift">Swift</a>
-                     <a href="/l/vb-net">VB.net</a>
-                     <br/>
-                     <a href="/languages">List of all supported programming languages</a>
-			    </p>
-				
-				</div>
-			</div>
-						
-			
-			
-<div class="modal hide fade" id="bug-dialog" role="dialog" tabindex="-1">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-    <h3>Report bug / make suggestion</h3>
-  </div>
-  <div class="modal-body">
-	<img src="//stx1.ideone.com/gfx/loader.gif" style="width: 14px; height: 14px;" alt="loading..."/>
-  </div>
-  <div class="modal-footer">
-    <a href="#" class="btn" data-dismiss="modal">Close</a>
-    <a href="#" class="btn btn-primary" id="bug-dialog-submit">submit</a>
-  </div>
-</div>
-
-
-<div class="modal hide fade" id="lang-dialog">
-	<div class="modal-header">
-    	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-    	<h3>Choose your language</h3>
-	</div>
-	<div class="modal-body">
-		<ul style="list-style-type: none;">
-			<li><a href="/lang/en"><b>English</b></a></li>
-			<li><a href="/lang/hi">Hindi</a></li>
-			<li><a href="/lang/hu">Hungarian</a></li>
-			<li><a href="/lang/mn">Mongolian</a></li>
-			<li><a href="/lang/pl">Polish</a></li>
-			<li><a href="/lang/ru">Russian</a></li>
-			<li><a href="/lang/es">Spanish</a></li>
-			<li><a href="/lang/zh">Traditional Chinese</a></li>
-					</ul>
-		
-	</div>
-  <div class="modal-footer">
-    <a href="#" class="btn" data-dismiss="modal">close</a>
-  </div>
-</div>
-
-
-
+<title>Tryit Editor v3.6</title>
+<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:image" content="https://www.w3schools.com/images/w3schools_logo.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="200">
+<meta property="og:image:height" content="200">
+<link rel="preload" href="https://www.w3schools.com/lib/fonts/fontawesome.woff2?14663396" as="font" type="font/woff2" crossorigin> 
+<link rel="preload" href="https://www.w3schools.com/lib/fonts/source-code-pro-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin> 
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3schools27.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/codemirror.css">
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-10507872-8', 'auto');
+  ga('create', 'UA-3855518-1', 'auto');
+  ga('require', 'displayfeatures');
+  ga('require', 'GTM-WJ88MZ5');
   ga('send', 'pageview');
 </script>
+
+<script type='text/javascript'>
+var k42 = false;
+var googletag = googletag || {}; googletag.cmd = googletag.cmd || [];
+
+k42 = true;
+googletag.cmd.push(function() { googletag.pubads().setTargeting("page_section",(function () {
+    var folder = location.pathname;
+    folder = folder.replace("/", "");
+    folder = folder.substr(0, folder.indexOf("/"));
+    return folder + "tryit";
+  })());
+});  
+(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=1;
+
+var snhb = snhb || {}; snhb.queue = snhb.queue || [];
+snhb.options = {
+               logOutputEnabled : false,
+               autoStartAuction: false
+               };
+
+</script>
+<script src="https://cdn.snigelweb.com/sncmp/latest/sncmp_stub.min.js"></script>
+<style>
+#snigel-cmp-framework .sn-b-def.sn-blue {color: #ffffff!important;background-color: #4CAF50!important;border-color: #4CAF50!important;}
+#snigel-cmp-framework .sn-b-def { border-color: #4CAF50!important;color: #4CAF50!important;}
+#snigel-cmp-framework .sn-selector ul li { color: #4CAF50!important}
+#snigel-cmp-framework .sn-selector ul li:after { background-color: #4CAF50!important; }
+#snigel-cmp-framework .sn-footer-tab .sn-privacy a {color:#4CAF50!important;}
+#snigel-cmp-framework .sn-arrow:after, #snigel-cmp-framework .sn-arrow:before { background-color: #4CAF50!important; }
+#snigel-cmp-framework .sn-switch input:checked+span::before { background-color: #4CAF50!important; }
+#adconsent-usp-link {border: 1px solid #4CAF50!important;color: #4CAF50!important;}
+#adconsent-usp-banner-optout input:checked+.adconsent-usp-slider {background-color:#4CAF50!important;}
+#adconsent-usp-banner-btn {color:#ffffff;border: solid 1px #4CAF50!important;background-color: #4CAF50!important;}</style>
 <script type="text/javascript">
-$(function(){
-	$(document).on('click', '.track', function(){
-		var event = $(this).attr('data-event');
-		var action = $(this).attr('data-action');
-		var value = $(this).attr('data-value');
-		ga('send', 'event', event, action, value);
-		console.log(event);
-	});
-});
+__cmp("setLogo", "https://www.w3schools.com/images/img_logo_small.png");
+__cmp("setPrivacyPolicy", "https://www.w3schools.com/about/about_privacy.asp");
 </script>
-<!-- Hotjar Tracking Code for http://ideone.com -->
+<script async type="text/javascript" src="https://cdn.snigelweb.com/pub/w3schools.com/snhb-loader.min.js"></script>
 <script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:334655,hjsv:5};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
+  snhb.queue.push(function(){
 
+    snhb.startAuction(["try_it_leaderboard"]);
+
+   });
+</script>
 <script>
+if (window.addEventListener) {              
+    window.addEventListener("resize", browserResize);
+} else if (window.attachEvent) {                 
+    window.attachEvent("onresize", browserResize);
+}
+var xbeforeResize = window.innerWidth;
+
+function browserResize() {
+    var afterResize = window.innerWidth;
+    if ((xbeforeResize < (970) && afterResize >= (970)) || (xbeforeResize >= (970) && afterResize < (970)) ||
+        (xbeforeResize < (728) && afterResize >= (728)) || (xbeforeResize >= (728) && afterResize < (728)) ||
+        (xbeforeResize < (468) && afterResize >= (468)) ||(xbeforeResize >= (468) && afterResize < (468))) {
+        xbeforeResize = afterResize;
+        
+        snhb.queue.push(function(){  snhb.startAuction(["try_it_leaderboard"]); });
+         
+    }
+    if (window.screen.availWidth <= 768) {
+      restack(window.innerHeight > window.innerWidth);
+    }
+    fixDragBtn();
+    showFrameSize();    
+}
+var fileID = "";
+var loadSave = false;
+function getSavedFile() {
+    loadSave = true;
+    var htmlCode;
+    var paramObj = {};
+    paramObj.fileid = "";
+    fileID = paramObj.fileid;
+    var paramA = JSON.stringify(paramObj);
+    var httpA = new XMLHttpRequest();
+    httpA.open("POST", globalURL, true);
+    httpA.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    httpA.onreadystatechange = function() {
+        if(httpA.readyState == 4 && httpA.status == 200) {
+            document.getElementById("textareaCode").value = httpA.responseText;
+            window.editor.getDoc().setValue(httpA.responseText);
+            loadSave = false;
+        }
+    }
+    httpA.send(paramA);   
+}
 </script>
+<style>
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  color:#000000;
+  margin:0px;
+  font-size:100%;
+}
+.trytopnav {
+  height:40px;
+  overflow:hidden;
+  min-width:380px;
+  position:absolute;
+  width:100%;
+  top:99px;
+  background-color:#E7E9EB;
+}
+.topnav-icons {
+  margin-right:8px;
+}
+.trytopnav a {
+  color:#999999;
+}
+.w3-bar .w3-bar-item:hover {
+  color:#757575 !important;
+}
+a.w3schoolslink {
+  padding:0 !important;
+  display:inline !important;
+}
+a.w3schoolslink:hover,a.w3schoolslink:active {
+  text-decoration:underline !important;
+  background-color:transparent !important;
+}
+#dragbar{
+  position:absolute;
+  cursor: col-resize;
+  z-index:3;
+  padding:5px;
+}
+#shield {
+  display:none;
+  top:0;
+  left:0;
+  width:100%;
+  position:absolute;
+  height:100%;
+  z-index:4;
+}
+#framesize span {
+  xfont-family:Consolas, monospace;
+}
+#container {
+  background-color:#E7E9EB;
+  width:100%;
+  overflow:auto;
+  position:absolute;
+  top:144px;
+  bottom:0;
 
+  height:auto;
+}
+#textareacontainer, #iframecontainer {
+  float:left;
+  height:100%;
+  width:50%;
+}
+#textarea, #iframe {
+  height:100%;
+  width:100%;
+  padding-bottom:10px;
+  padding-top:1px;
+}
+#textarea {
+  padding-left:10px;
+  padding-right:5px;  
+}
+#iframe {
+  padding-left:5px;
+  padding-right:10px;  
+}
+#textareawrapper {
+  width:100%;
+  height:100%;
+  background-color: #ffffff;
+  position:relative;
+  box-shadow:0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+#iframewrapper {
+  width:100%;
+  height:100%;
+  -webkit-overflow-scrolling: touch;
+  background-color: #ffffff;
+  box-shadow:0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+#textareaCode {
+  background-color: #ffffff;
+  font-family: consolas,"courier new",monospace;
+  font-size:15px;
+  height:100%;
+  width:100%;
+  padding:8px;
+  resize: none;
+  border:none;
+  line-height:normal;    
+}
+.CodeMirror.cm-s-default {
+  line-height:normal;
+  padding: 4px;
+  height:100%;
+  width:100%;
+}
+#iframeResult, #iframeSource {
+  background-color: #ffffff;
+  height:100%;
+  width:100%;  
+}
+#stackV {background-color:#999999;}
+#stackV:hover {background-color:#BBBBBB !important;}
+#stackV.horizontal {background-color:transparent;}
+#stackV.horizontal:hover {background-color:#BBBBBB !important;}
+#stackH.horizontal {background-color:#999999;}
+#stackH.horizontal:hover {background-color:#999999 !important;}
+#textareacontainer.horizontal,#iframecontainer.horizontal{
+  height:50%;
+  float:none;
+  width:100%;
+}
+#textarea.horizontal{
+  height:100%;
+  padding-left:10px;
+  padding-right:10px;
+}
+#iframe.horizontal{
+  height:100%;
+  padding-right:10px;
+  padding-bottom:10px;
+  padding-left:10px;  
+}
+#container.horizontal{
+  min-height:200px;
+  margin-left:0;
+}
+#tryitLeaderboard {
+  overflow:hidden;
+  text-align:center;
+  margin-top:5px;
+  height:90px;
+}
+.w3-dropdown-content {width:350px}
 
-<script>
-(function(){
-		if(typeof _bsa !== 'undefined' && _bsa) {
-			  		// format, zoneKey, segment:value, options
-			  		_bsa.init('flexbar', 'CE7D42QN', 'placement:ideonecom');
-					  	}
-})();
-</script>
+@media screen and (max-width: 727px) {
+  .trytopnav {top:70px;}
+  #container {top:116px;}
 
+}
+@media screen and (max-width: 467px) {
+  .trytopnav {top:60px;}
+  #container {top:106px;}
+  .w3-dropdown-content {width:100%}
+}
+@media only screen and (max-device-width: 768px) {
+  #iframewrapper {overflow: auto;}
+  #container     {min-width:310px;}
+  .stack         {display:none;}
+  #tryhome       {display:block;}
+}
 
-		</div><!-- end of #_container -->
+.fa {
+  display:inline-block;
+  font:normal normal normal 14px/1 FontAwesome;
+  font-size:inherit;
+  text-rendering:auto;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  transform:translate(0,0);
+}
+.fa-2x {
+  font-size:2em;
+}
+.fa-home:before {content: '\e800'; }
+.fa-save:before {content: '\e804'; }
+.fa-rotate:before {content: '\e813'; }
+.fa-menu:before { content: '\f0c9'; }
+.fa-adjust:before { content: '\e80b'; }
+.loader {
+    border: 6px solid #f3f3f3; /* Light grey */
+    border-top: 6px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+}
+#saveLoader {
+    margin:20px;
+}
 
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+#iframewrapper {
+	
+}
 
-<!--
-<script type="text/javascript">
-(function() {
-        var wrc = document.createElement('script'); wrc.type = 'text/javascript'; wrc.async = true; window.rc_utm_source='ideone';
-        wrc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'recruitcoders.com/w4loader.js';
-        var s = document.getElementsByTagName('body')[0]; s.appendChild(wrc);
-})();
-</script>
--->
+body.darktheme {
+  background-color:rgb(40, 44, 52);
+}
+body.darktheme #tryitLeaderboard{
+  background-color:rgb(40, 44, 52);
+}
+body.darktheme .trytopnav{
+  background-color:#616161;
+  color:#dddddd;
+}
+body.darktheme #container {
+  background-color:#616161;
+}
+body.darktheme .trytopnav a {
+  color:#dddddd;
+}
+body.darktheme ::-webkit-scrollbar {width:12px;height:3px;}
+body.darktheme ::-webkit-scrollbar-track-piece {background-color:#000;}
+body.darktheme ::-webkit-scrollbar-thumb {height:50px;background-color: #616161;}
+body.darktheme ::-webkit-scrollbar-thumb:hover {background-color: #aaaaaa;}
 
+.trytopnav {
+  height:48px!important;
+}
+.fa {
+  padding: 10px 10px!important;
+}
+#saveGDriveBtn, #loadGDriveBtn {
+  padding:22px 26px;
+}
+a.topnav-icons, a.topnav-icons.fa-home, a.topnav-icons.fa-menu {
+    font-size: 28px!important;
+}
+</style>
+<!--[if lt IE 8]>
+<style>
+#textareacontainer, #iframecontainer {width:48%;}
+#container {height:500px;}
+#textarea, #iframe {width:90%;height:450px;}
+#textareaCode, #iframeResult {height:450px;}
+.stack {display:none;}
+</style>
+<![endif]-->
+</head>
+<body>
 
-	</body>
+<div id='tryitLeaderboard'>
+<!-- TryitLeaderboard -->
+
+  <!--<pre>try_it_leaderboard, all: [320,50][728,90][468,60]</pre>-->
+  <div id="snhb-try_it_leaderboard-0"></div>
+  <!-- adspace tryit-->
+ 
+</div>
+<script>globalURL = 'https://tryit.w3schools.com/code_datas.php';</script>
+<div id="saveModal" class="w3-modal" style="z-index:4">
+  <div class="w3-modal-content">
+    <div class="w3-display-container">
+      <span onclick="hideAndResetModal()" class="w3-button w3-display-topright" style="font-weight:bold;">&times;</span>
+      <div id="preSave" class="w3-panel">
+        <h2>Save Your Code</h2>
+        <p>If you click the save button, your code will be saved, and you get a URL you can share with others.</p>
+        <div style="height:34px">
+        <p>
+            <button class="w3-btn" style="background-color:#04AA6D;color:white;margin-right:15px" title="Save" onclick="saveFile(document.getElementById('textareaCode').value);">Save</button>
+            <button class="w3-btn w3-red ws-hover-black" title="Cancel" style="margin-right:15px" onclick="hideAndResetModal();">Cancel</button>
+        </p>
+        </div>
+        <p>By clicking the "Save" button you agree to our <a href="javascript:void(0);" class="w3-hover-text-green" onclick="document.getElementById('saveDisclaimer').style.display='block';">terms and conditions</a>.</p>
+        <p><a href="/default.asp" style="background-color:#E7E9EB;color:black" class="w3-button" onclick="event.preventDefault();displayError()">Report Error</a></p>
+        <div id="saveDisclaimer" style="display:none;">
+          <p>All code in shared files are supplied by users, and belongs to the poster.</p>
+          <p>All shared files are made public. No license is enforced.</p>
+          <p>Any code can be removed without warning (if it is deemed offensive, damaging or for any other reason).</p>        
+          <p>w3schools.com are not responsible or liable for any loss or damage of any kind during the usage of provided code.</p>
+        </div>
+      </div>
+      <div id="errorSave" style="display:none" class="w3-panel">
+          <h2>Your Code Could Not be Saved</h2>
+          <p>The code has too many characters.</p>
+      </div>
+      <div id="postSave" class="w3-panel" style="display:none;">
+        <div id="saveLoader" class="loader"></div>
+        <div id="saveModalSaved" style="display:none">
+          <h2>Your Code has Been Saved</h2>
+          <p>File has been saved to: <a id="shareLink" class="w3-hover-text-green" href="javascript:void(0);" target="_blank"><span id="shareLinkText"></span></a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="driveSaveModal" class="w3-modal" style="z-index:4">
+  <div class="w3-modal-content">
+    <div class="w3-display-container">
+      <span onclick="resetDriveSaveModal()" class="w3-button w3-display-topright ws-hover-black" style="font-weight:bold;">&times;</span>
+      <div id="driveText" class="w3-panel w3-large">
+        <h2>Save to Google Drive</h2>
+        <p>If you have a Google account, you can save this code to your Google Drive.</p>
+        <p>Google will ask you to confirm Google Drive access.</p>
+        <p><label class="w3-text-black"><b>Save file as:</b></label>
+        <input class="w3-input w3-border" type="text" id="googleFileName" value="tryhtml_svg_circle">
+        <button class="w3-button w3-light-grey w3-hover-grey w3-hover-text-white w3-margin-top"  title="Save file to Google Drive" onclick="handleAuthClick(event,'save')"><img style="margin-right:5px" alt="Save file to Google Drive" title="Save file to Google Drive" src="/images/driveicon.png">Save file</button>
+        <p class="w3-warning" style="margin-left:-16px;margin-right:-16px;margin-bottom:-16px;padding-bottom:26px;"><strong>Warning:</strong> The 10th of June 2021, we will discontinue the ability to save to Google Drive.<br><br>You will still be able to access your stored code on Google Drive.</p>
+      </div>
+      <div class="w3-panel w3-large loader" id="driveSavedPanel" style="display:none">
+      <p id="driveSavedText"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="driveLoadModal" class="w3-modal" style="z-index:4">
+  <div class="w3-modal-content">
+    <div class="w3-display-container">
+      <span onclick="resetDriveLoadModal()" class="w3-button w3-display-topright ws-hover-black" style="font-weight:bold;">&times;</span>
+      <div class="w3-panel w3-large">
+        <h2>Open from Google Drive</h2>
+        <p>If you have saved a file to Google Drive, you can open it here:</p>
+        <p><button class="w3-button w3-light-grey w3-hover-grey w3-hover-text-white" title="Open file from Google Drive" onclick="handleAuthClick(event,'open')"><img style="margin-right:5px" alt="Open file from Google Drive" title="Open file from Google Drive" src="/images/driveicon.png">Open file</button></p>
+        <p class="w3-warning" style="margin-left:-16px;margin-right:-16px;margin-bottom:-16px;padding-bottom:26px;"><strong>Warning:</strong> The 10th of June 2021, we will discontinue the ability to save to Google Drive.<br><br>You will still be able to access your stored code on Google Drive.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="trytopnav">
+<div class="w3-bar" style="overflow:auto">
+  <a id="tryhome" href="https://www.w3schools.com" target="_blank" title="w3schools.com Home" class="w3-button w3-bar-item topnav-icons fa fa-home" style="margin-top:-2px;"></a>
+  <a href="javascript:void(0);" onclick="openMenu();gDrive()" id="menuButton" title="Open Menu" class="w3-dropdown-click w3-button w3-bar-item topnav-icons fa fa-menu" style="margin-top:-2px;x"></a>
+  <a href="javascript:void(0);" onclick="click_savebtn()" title="Save" class="w3-button w3-bar-item topnav-icons w3-hide-small fa fa-save" style="margin-top:-2px;"></a>
+  <a href="javascript:void(0);" onclick="restack(currentStack)" title="Change Orientation" class="w3-button w3-bar-item topnav-icons fa fa-rotate" style="margin-top:-2px;"></a>
+  <a href="javascript:void(0);" onclick="retheme()" title="Change Theme" class="w3-button w3-bar-item topnav-icons fa fa-adjust" style="margin-top:-2px;"></a>
+  <button class="w3-button w3-bar-item w3-hover-white w3-hover-text-green" style="background-color:#04AA6D;color:white;font-size:20px" onclick="submitTryit(1);ga('send', 'event', 'runCode', 'click');snhb.queue.push(function(){googletag.pubads().setTargeting('page_section',(function () {var folder = location.pathname;folder = folder.replace('/', ''); folder = folder.substr(0, folder.indexOf('/')); return folder + 'tryitUA'; })());snhb.startAuction(['try_it_leaderboard']);});">Run &raquo;</button>
+  <span class="w3-right w3-hide-small w3-hide-medium" style="padding:8px 8px 8px 8px;display:block"></span>
+  <span class="w3-right w3-hide-small" style="padding:8px 0;display:block;float:right;font-size:16px;margin-top:4px"><span id="framesize"></span></span>
+</div>
+
+</div>
+
+<div id="shield"></div>
+
+<a href="javascript:void(0)" id="dragbar"></a>
+<div id="container">
+<div id="navbarDropMenu" class="w3-dropdown-content w3-bar-block w3-border" style="z-index:5">
+<span onclick="openMenu()" class="w3-button w3-display-topright w3-transparent ws-hover-black" title="Close Menu" style="font-weight:bold;padding-top:10px;padding-bottom:11px;">&times;</span>
+  <div class="w3-bar-block">
+    <a class="w3-bar-item w3-button" href='javascript:void(0);' title="Change Orientaton" onclick="openMenu();restack(currentStack)"><i class="fa fa-rotate" style="font-size:26px;margin-left:-4px;margin-right:8px"></i><span style="position:relative;top:-4px;left:2px;">Change Orientation</span></a>
+    <a class="w3-bar-item w3-button" href="javascript:void(0);" title="Save" onclick="openMenu();click_savebtn()"><i class="fa fa-save" style="font-size:26px;margin-right:10px;"></i><span style="position:relative;top:-4px;left:2px;">Save Code</span></a>
+    <a class="w3-bar-item w3-button" href='javascript:void(0);' id="saveGDriveBtn" title="Save to Google Drive" onclick="openMenu();click_google_savebtn()"><img src="/images/driveicon_32.png" alt="Save to Google Drive" title="Save to Google Drive" style="margin-right:10px;width:24px;"><span style="position:relative;left:1px;">Save to Google Drive</span></a>
+    <a class="w3-bar-item w3-button" href='javascript:void(0);' id="loadGDriveBtn" title="Load from Google Drive" onclick="openMenu();click_google_loadbtn()"><img src="/images/driveicon_32.png" alt="Load from Google Drive" title="Load from Google Drive" style="margin-right:10px;width:24px;"><span style="position:relative;left:1px;">Load from Google Drive</span></a>
+    <a class="w3-bar-item w3-button" href='javascript:void(0);' title="Change Theme" onclick="openMenu();retheme()"><i class="fa fa-adjust" style="font-size:26px;margin-right:8px"></i><span style="position:relative;top:-4px;left:2px;">Change Theme, Dark/Light</span></a>
+  </div>
+  <footer class="w3-container w3-small ws-grey">
+  <p><a style="display:inline;padding:0;" href="https://www.w3schools.com/about/about_privacy.asp" target="_blank" onclick="openMenu();" class="w3-hover-none ws-hover-text-green">Privacy policy</a> and 
+  <a style="display:inline;padding:0;" href="https://www.w3schools.com/about/about_copyright.asp" target="_blank" onclick="openMenu();" class="w3-hover-none ws-hover-text-green">Copyright 1999-2021</a></p>
+  </footer>
+</div>
+<div id="menuOverlay" class="w3-overlay w3-transparent" style="cursor:pointer;z-index:4"></div>
+  <div id="textareacontainer">
+    <div id="textarea">
+      <div id="textareawrapper">
+        <textarea autocomplete="off" id="textareaCode" wrap="logical" spellcheck="false"><!DOCTYPE html>
+<html>
+<body>
+
+<svg width="100" height="100">
+  <circle cx="50" cy="50" r="40"
+  stroke="green" stroke-width="4" fill="yellow" />
+Sorry, your browser does not support inline SVG.
+</svg>
+ 
+</body>
 </html>
+</textarea>
+        <form id="codeForm" autocomplete="off" style="margin:0px;display:none;">
+          <input type="hidden" name="code" id="code" />
+        </form>
+       </div>
+    </div>
+  </div>
+  <div id="iframecontainer">
+    <div id="iframe">
+      <div id="iframewrapper"></div>
+    </div>
+  </div>
+</div>
+<div id="err_form" class="w3-modal" style="z-index:4">
+  <div class="w3-modal-content w3-display-container">
+    <span onclick="document.getElementById('err_form').style.display='none'" class="w3-button w3-display-topright w3-padding ws-green" style="font-weight:bold;">&times;</span>
+    <div class="w3-container ws-green">
+      <h2>Report a Problem:</h2>
+    </div>
+    <div class="w3-container"> 
+      <p>If you want to report an error, or if you want to make a suggestion, do not hesitate to send us an e-mail:</p>
+      <p>help@w3schools.com</p>
+    </div>
+  </div>
+</div>
+<style>
+#backtotutcontainer {
+  position:absolute;
+  bottom:0;
+  background-color:#F1F1F1;
+  width:100%;
+  height:50px;
+  padding-left:10px;
+  color:#555;
+}
+.w3-btn:hover.w3-blue, .w3-btn:active.w3-blue {
+  background-color: #0d8bf2!important;
+  color: #fff!important;
+  box-shadow: none;
+}
+body.darktheme #backtotutcontainer {
+  background-color:#616161;
+  color:#ddd;
+}
+</style>
 
+<script src="https://www.w3schools.com/lib/codemirror.js"></script>
+<script src="https://www.w3schools.com/lib/codemirror_jsx.js"></script>
+<script>
+submitTryit()
+
+function submitTryit(n) {
+  if (window.editor) {
+    window.editor.save();
+  }
+  var text = document.getElementById("textareaCode").value;
+  var ifr = document.createElement("iframe");
+  ifr.setAttribute("frameborder", "0");
+  ifr.setAttribute("id", "iframeResult");
+  ifr.setAttribute("name", "iframeResult");  
+  ifr.setAttribute("allowfullscreen", "true");  
+  document.getElementById("iframewrapper").innerHTML = "";
+  document.getElementById("iframewrapper").appendChild(ifr);
+  if (loadSave == true ) {
+    ifr.setAttribute("src", "/code/opentext.htm");
+  } else if (fileID != "" && loadSave == false) {
+    var t=text;
+    t=t.replace(/=/gi,"w3equalsign");
+    t=t.replace(/\+/gi,"w3plussign");    
+    var pos=t.search(/script/i)
+    while (pos>0) {
+      t=t.substring(0,pos) + "w3" + t.substr(pos,3) + "w3" + t.substr(pos+3,3) + "tag" + t.substr(pos+6);
+	    pos=t.search(/script/i);
+    }
+    document.getElementById("code").value=t;
+    document.getElementById("codeForm").action = "https://tryit.w3schools.com/tryit_view.php?x=" + Math.random();
+    document.getElementById('codeForm').method = "post";
+    document.getElementById('codeForm').acceptCharset = "utf-8";
+    document.getElementById('codeForm').target = "iframeResult";
+    document.getElementById("codeForm").submit();
+  } else {
+    var ifrw = (ifr.contentWindow) ? ifr.contentWindow : (ifr.contentDocument.document) ? ifr.contentDocument.document : ifr.contentDocument;
+    ifrw.document.open();
+    ifrw.document.write(text);  
+    ifrw.document.close();
+    //23.02.2016: contentEditable is set to true, to fix text-selection (bug) in firefox.
+    //(and back to false to prevent the content from being editable)
+    //(To reproduce the error: Select text in the result window with, and without, the contentEditable statements below.)  
+    if (ifrw.document.body && !ifrw.document.body.isContentEditable) {
+      ifrw.document.body.contentEditable = true;
+      ifrw.document.body.contentEditable = false;
+    }
+  }
+}
+var currentStack=true;
+if ((window.screen.availWidth <= 768 && window.innerHeight > window.innerWidth) || "" == " horizontal") {restack(true);}
+function restack(horizontal) {
+    var tc, ic, t, i, c, f, sv, sh, d, height, flt, width;
+    tc = document.getElementById("textareacontainer");
+    ic = document.getElementById("iframecontainer");
+    t = document.getElementById("textarea");
+    i = document.getElementById("iframe");
+    c = document.getElementById("container");    
+    sv = document.getElementById("stackV");
+    sh = document.getElementById("stackH");
+    tc.className = tc.className.replace("horizontal", "");
+    ic.className = ic.className.replace("horizontal", "");        
+    t.className = t.className.replace("horizontal", "");        
+    i.className = i.className.replace("horizontal", "");        
+    c.className = c.className.replace("horizontal", "");                        
+    if (sv) {sv.className = sv.className.replace("horizontal", "")};
+    if (sv) {sh.className = sh.className.replace("horizontal", "")};
+    stack = "";
+    if (horizontal) {
+        tc.className = tc.className + " horizontal";
+        ic.className = ic.className + " horizontal";        
+        t.className = t.className + " horizontal";        
+        i.className = i.className + " horizontal";                
+        c.className = c.className + " horizontal";                
+        if (sv) {sv.className = sv.className + " horizontal"};
+        if (sv) {sh.className = sh.className + " horizontal"};
+        stack = " horizontal";
+        document.getElementById("textareacontainer").style.height = "50%";
+        document.getElementById("iframecontainer").style.height = "50%";
+        document.getElementById("textareacontainer").style.width = "100%";
+        document.getElementById("iframecontainer").style.width = "100%";
+        currentStack=false;
+    } else {
+        document.getElementById("textareacontainer").style.height = "100%";
+        document.getElementById("iframecontainer").style.height = "100%";
+        document.getElementById("textareacontainer").style.width = "50%";
+        document.getElementById("iframecontainer").style.width = "50%";
+        currentStack=true;        
+    }
+    fixDragBtn();
+    showFrameSize();
+}
+function showFrameSize() {
+  var t;
+  var width, height;
+  width = Number(w3_getStyleValue(document.getElementById("iframeResult"), "width").replace("px", "")).toFixed();
+  height = Number(w3_getStyleValue(document.getElementById("iframeResult"), "height").replace("px", "")).toFixed();
+  document.getElementById("framesize").innerHTML = "Result Size: <span>" + width + " x " + height + "</span>";
+}
+var dragging = false;
+var stack;
+function fixDragBtn() {
+  var textareawidth, leftpadding, dragleft, containertop, buttonwidth
+  var containertop = Number(w3_getStyleValue(document.getElementById("container"), "top").replace("px", ""));
+  if (stack != " horizontal") {
+    document.getElementById("dragbar").style.width = "5px";    
+    textareasize = Number(w3_getStyleValue(document.getElementById("textareawrapper"), "width").replace("px", ""));
+    leftpadding = Number(w3_getStyleValue(document.getElementById("textarea"), "padding-left").replace("px", ""));
+    buttonwidth = Number(w3_getStyleValue(document.getElementById("dragbar"), "width").replace("px", ""));
+    textareaheight = w3_getStyleValue(document.getElementById("textareawrapper"), "height");
+    dragleft = textareasize + leftpadding + (leftpadding / 2) - (buttonwidth / 2);
+    document.getElementById("dragbar").style.top = containertop + "px";
+    document.getElementById("dragbar").style.left = dragleft + "px";
+    document.getElementById("dragbar").style.height = textareaheight;
+    document.getElementById("dragbar").style.cursor = "col-resize";
+    
+  } else {
+    document.getElementById("dragbar").style.height = "5px";
+    if (window.getComputedStyle) {
+        textareawidth = window.getComputedStyle(document.getElementById("textareawrapper"),null).getPropertyValue("height");
+        textareaheight = window.getComputedStyle(document.getElementById("textareawrapper"),null).getPropertyValue("width");
+        leftpadding = window.getComputedStyle(document.getElementById("textarea"),null).getPropertyValue("padding-top");
+        buttonwidth = window.getComputedStyle(document.getElementById("dragbar"),null).getPropertyValue("height");
+    } else {
+        dragleft = document.getElementById("textareawrapper").currentStyle["width"];
+    }
+    textareawidth = Number(textareawidth.replace("px", ""));
+    leftpadding = Number(leftpadding .replace("px", ""));
+    buttonwidth = Number(buttonwidth .replace("px", ""));
+    dragleft = containertop + textareawidth + leftpadding + (leftpadding / 2);
+    document.getElementById("dragbar").style.top = dragleft + "px";
+    document.getElementById("dragbar").style.left = "5px";
+    document.getElementById("dragbar").style.width = textareaheight;
+    document.getElementById("dragbar").style.cursor = "row-resize";        
+  }
+}
+function dragstart(e) {
+  e.preventDefault();
+  dragging = true;
+  var main = document.getElementById("iframecontainer");
+}
+function dragmove(e) {
+  if (dragging) 
+  {
+    document.getElementById("shield").style.display = "block";        
+    if (stack != " horizontal") {
+      var percentage = (e.pageX / window.innerWidth) * 100;
+      if (percentage > 5 && percentage < 98) {
+        var mainPercentage = 100-percentage;
+        document.getElementById("textareacontainer").style.width = percentage + "%";
+        document.getElementById("iframecontainer").style.width = mainPercentage + "%";
+        fixDragBtn();
+      }
+    } else {
+      var containertop = Number(w3_getStyleValue(document.getElementById("container"), "top").replace("px", ""));
+      var percentage = ((e.pageY - containertop + 20) / (window.innerHeight - containertop + 20)) * 100;
+      if (percentage > 5 && percentage < 98) {
+        var mainPercentage = 100-percentage;
+        document.getElementById("textareacontainer").style.height = percentage + "%";
+        document.getElementById("iframecontainer").style.height = mainPercentage + "%";
+        fixDragBtn();
+      }
+    }
+    showFrameSize();    
+  }
+}
+function dragend() {
+  document.getElementById("shield").style.display = "none";
+  dragging = false;
+  var vend = navigator.vendor;
+  if (window.editor && vend.indexOf("Apple") == -1) {
+      window.editor.refresh();
+  }
+}
+if (window.addEventListener) {              
+  document.getElementById("dragbar").addEventListener("mousedown", function(e) {dragstart(e);});
+  document.getElementById("dragbar").addEventListener("touchstart", function(e) {dragstart(e);});
+  window.addEventListener("mousemove", function(e) {dragmove(e);});
+  window.addEventListener("touchmove", function(e) {dragmove(e);});
+  window.addEventListener("mouseup", dragend);
+  window.addEventListener("touchend", dragend);
+  window.addEventListener("load", fixDragBtn);
+  window.addEventListener("load", showFrameSize);
+}
+function click_savebtn() {
+  if (window.editor) {
+    window.editor.save();
+  }
+  document.getElementById('saveModal').style.display = 'block';
+}
+function click_google_savebtn() {
+  if (window.editor) {
+    window.editor.save();
+  }
+  document.getElementById('driveSaveModal').style.display='block'
+}
+
+function click_google_loadbtn() {
+  document.getElementById('driveLoadModal').style.display='block'
+}
+function retheme() {
+  var cc = document.body.className;
+  if (cc.indexOf("darktheme") > -1) {
+    document.body.className = cc.replace("darktheme", "");
+    if (opener) {opener.document.body.className = cc.replace("darktheme", "");}
+    localStorage.setItem("preferredmode", "light");
+  } else {
+    document.body.className += " darktheme";
+    if (opener) {opener.document.body.className += " darktheme";}
+    localStorage.setItem("preferredmode", "dark");
+  }
+}
+(
+function setThemeMode() {
+  var x = localStorage.getItem("preferredmode");
+  if (x == "dark") {
+    document.body.className += " darktheme";
+  }
+})();
+function colorcoding() {
+  var ua = navigator.userAgent;
+  //Opera Mini refreshes the page when trying to edit the textarea.
+  if (ua && ua.toUpperCase().indexOf("OPERA MINI") > -1) { return false; }
+  window.editor = CodeMirror.fromTextArea(document.getElementById("textareaCode"), {
+    mode: "text/html",
+    htmlMode: true,
+    lineWrapping: true,
+    smartIndent: false,
+    addModeClass: true
+  });
+//  window.editor.on("change", function () {window.editor.save();});
+}
+colorcoding();
+
+function w3_getStyleValue(elmnt,style) {
+    if (window.getComputedStyle) {
+        return window.getComputedStyle(elmnt,null).getPropertyValue(style);
+    } else {
+        return elmnt.currentStyle[style];
+    }
+}
+//SAVE AND OPEN SCRIPT
+var oauthToken;
+var userAction;
+var pickerApiLoaded;
+var developerKey = 'AIzaSyAMZDPXiGcCNWs1UCWG9LS6kkW5YiABfJ0';
+var CLIENT_ID = '451843133508-ckbr5r6ch1ofqbmh87oll4u6ltinqv2t.apps.googleusercontent.com';
+var SCOPES = ['https://www.googleapis.com/auth/drive.file'];
+
+//Check if current user has authorized this application
+function checkAuth() {
+    gapi.auth.authorize(
+    {
+        'client_id': CLIENT_ID,
+        'scope': SCOPES.join(' '),
+        'immediate': true
+    }, handleAuthResult);
+}
+
+//Handle response from authorization server
+function handleAuthResult(authResult) {
+    if (authResult && !authResult.error) {
+        oauthToken = authResult.access_token;
+        loadApi();
+    }
+}
+
+// Initiate auth flow in response to user clicking authorize button
+function handleAuthClick(event,userClick) {
+    userAction = userClick;
+    gapi.auth.authorize(
+        {client_id: CLIENT_ID, scope: SCOPES, immediate: false},
+        handleAuthResult);
+    return false;
+}
+
+// Load API library
+function loadApi() {
+    gapi.client.load('drive', 'v3');
+    gapi.load('picker', {'callback': onPickerApiLoad});
+}
+function onPickerApiLoad() {
+    pickerApiLoaded = true;
+    if (userAction=="save") {
+        userAction="";
+        document.getElementById('driveText').style.display='none';
+        document.getElementById('driveSavedPanel').style.display='block';
+        createFileWithHTMLContent(document.getElementById('googleFileName').value,document.getElementById('textareaCode').value)     
+    }
+    if (userAction=="open") {
+        userAction="";
+        createPicker();
+    }
+}
+
+// Create and render a Picker object for picking HTML file
+function createPicker() {
+    if (pickerApiLoaded) {
+        var view = new google.picker.View(google.picker.ViewId.DOCS);
+        view.setMimeTypes("text/html");
+        var picker = new google.picker.PickerBuilder().
+            addView(view).
+            setOAuthToken(oauthToken).
+            setDeveloperKey(developerKey).
+            setCallback(pickerCallback).
+            build();
+        picker.setVisible(true);
+    }
+}
+// Put content of file in tryit editor
+function pickerCallback(data) {
+    var docID = '';
+    if (data[google.picker.Response.ACTION] == google.picker.Action.PICKED) {
+        var doc = data[google.picker.Response.DOCUMENTS][0];
+        docID = doc[google.picker.Document.ID];
+        getContentOfFile(docID);
+    }
+}
+
+//Get contents
+function getContentOfFile(theID){
+    gapi.client.request({'path': '/drive/v3/files/'+theID+'?alt=media&key='+developerKey,'method': 'GET',callback: function ( theResponseJS, theResponseTXT ) {
+        var myToken = gapi.auth.getToken();
+        var code = JSON.parse(theResponseTXT);
+        code = code.gapiRequest.data.body;
+        document.getElementById("textareaCode").value=code;
+        window.editor.getDoc().setValue(code);
+        submitTryit(1);
+        resetDriveLoadModal();
+        }
+    });
+}
+
+var createFileWithHTMLContent = function(name,data,callback) {
+    const boundary = '-------314159265358979323846';
+    const delimiter = "\r\n--" + boundary + "\r\n";
+    const close_delim = "\r\n--" + boundary + "--";
+    const contentType = 'text/html';
+
+    var metadata = {
+        'name': name,
+        'mimeType': contentType
+    };
+
+    var multipartRequestBody =
+        delimiter +
+        'Content-Type: application/json\r\n\r\n' +
+        JSON.stringify(metadata) +
+        delimiter +
+        'Content-Type: ' + contentType + '\r\n\r\n' +
+        data +
+        close_delim;
+
+    var request = gapi.client.request({
+        'path': '/upload/drive/v3/files',
+        'method': 'POST',
+        'params': {'uploadType': 'multipart'},
+        'headers': {
+            'Content-Type': 'multipart/related; boundary="' + boundary + '"'
+        },
+        'body': multipartRequestBody});
+    if (!callback) {
+        callback = function(file) {
+            console.log(file);
+            document.getElementById("driveSavedText").innerHTML = file.name + " saved in Google Drive";
+            document.getElementById("driveSavedPanel").className = "w3-panel w3-large";
+        };
+    }
+    request.execute(callback);
+}
+
+if (navigator.userAgent.indexOf("MSIE") > 0 || navigator.userAgent.indexOf("Edge") > 0) {
+    document.getElementById("saveGDriveBtn").style.display = "none";
+    document.getElementById("loadGDriveBtn").style.display = "none";
+}
+
+
+function resetDriveSaveModal() {
+    document.getElementById('driveSavedText').innerHTML='';
+    document.getElementById('driveSaveModal').style.display='none'
+    document.getElementById('driveSavedPanel').style.display='none'
+    document.getElementById('driveText').style.display='block'
+    document.getElementById("driveSavedPanel").className = "w3-panel w3-large loader";
+}
+function resetDriveLoadModal() {
+    document.getElementById('driveLoadModal').style.display='none'
+}
+
+function saveFile(code) {
+    document.getElementById('preSave').style.display='none';
+    if (code.length>20000) {
+        document.getElementById('errorSave').style.display='block';    
+        return;
+    }
+    document.getElementById('postSave').style.display='block';    
+    var paramObj = {};
+    paramObj.code = code;
+    var paramB = JSON.stringify(paramObj);
+    var httpB = new XMLHttpRequest();
+    httpB.open("POST", globalURL, true);
+
+    httpB.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+    httpB.onreadystatechange = function() {
+    if(httpB.readyState == 4 && httpB.status == 200) {
+        if(httpB.responseText.substr(0,2) == "OK" ) {
+          var getId = httpB.responseText.substr(2);
+          document.getElementById("shareLink").href = "/code/tryit.asp?filename=" + getId;
+          document.getElementById("shareLinkText").innerHTML = "https://www.w3schools.com/code/tryit.asp?filename=" + getId;
+          document.getElementById('saveLoader').style.display = "none";
+          document.getElementById("saveModalSaved").style.display  = "block";
+        }
+    }
+    }
+    httpB.send(paramB);
+}
+function hideAndResetModal() {
+    document.getElementById("saveModal").style.display = "none";
+    document.getElementById('preSave').style.display = "block";
+    document.getElementById('errorSave').style.display = "none";    
+    document.getElementById('postSave').style.display = "none";
+    document.getElementById("saveModalSaved").style.display = "none";
+    document.getElementById('saveDisclaimer').style.display= "none";
+    document.getElementById('saveLoader').style.display = "block";
+}
+
+function displayError() {
+  document.getElementById("err_form").style.display = "block";
+  hideSent();
+}
+function hideError() {
+  document.getElementById("err_form").style.display = "none";
+}
+function hideSent() {
+  document.getElementById("err_sent").style.display = "none";
+}
+function openMenu() {
+    var x = document.getElementById("navbarDropMenu");
+    var y = document.getElementById("menuOverlay");
+    var z = document.getElementById("menuButton");
+    if (z.className.indexOf("w3-text-gray") == -1) {
+        z.className += " w3-text-gray";
+    } else { 
+        z.className = z.className.replace(" w3-text-gray", "");
+    }
+    if (z.className.indexOf("w3-gray") == -1) {
+        z.className += " w3-gray";
+    } else { 
+        z.className = z.className.replace(" w3-gray", "");
+    }
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+    if (y.className.indexOf("w3-show") == -1) {
+        y.className += " w3-show";
+    } else { 
+        y.className = y.className.replace(" w3-show", "");
+    }
+
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == document.getElementById("saveModal")) {
+        hideAndResetModal();
+    }
+    if (event.target == document.getElementById("driveSaveModal")) {
+        resetDriveSaveModal();
+    }
+    if (event.target == document.getElementById("driveLoadModal")) {
+        resetDriveLoadModal();
+    }
+    if (event.target == document.getElementById("menuOverlay")) {
+        openMenu();
+    }
+    
+}
+
+function gDrive() {
+
+  var gDri = document.createElement('script'); gDri.id = 'gDri'; gDri.type = 'text/javascript'; gDri.async = true;
+  gDri.src = 'https://apis.google.com/js/client.js?onload=checkAuth';
+  var el = document.getElementById('gDri');
+  if (el == null) {
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gDri, s);
+  }
+
+};
+</script>
+
+</body>
+</html>
